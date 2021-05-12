@@ -67,10 +67,9 @@ console.log(calcAge3(1991));
  console.log(yearsUntilRetirement(1991,'shahed'));
  console.log(yearsUntilRetirement(1988,'Jonas')); */
 
-
 //Lec 36 [Functions calling from another function]
 
-function cutFruitPieces(fruit){
+/* function cutFruitPieces(fruit){
     return fruit*4;
 }
 
@@ -81,4 +80,143 @@ function fruitProcessor(apples,oranges){
     return juice;
 }
 
-console.log(fruitProcessor(2,1));
+console.log(fruitProcessor(2,1)); */
+
+//Lec 37 [Reiewing Function]
+/* 
+    const ageCalc=bithYear=>2021-bithYear;
+
+const YearOfRetirement =(firstName,bithYear)=>{
+        const age = ageCalc(bithYear);
+        const retirment = 67 - age;
+        return (`${firstName} is ${age} years old and will retire after ${retirment} years`);
+}
+ */
+//Lec 38 [coding challange]
+
+/* const calcAverage = (fScore,sScore,tScore)=>{
+     const avg = (fScore+sScore+tScore)/2;
+     return avg;
+}
+const checkWinner = (avgDolhins,avgKoalas)=>{
+   //const winner = avgDolhins >= avgKoalas*2 ? `Dolhins win` :(avgKoalas >= avgDolhins*2 ? `Koalas win`:`NO one win`);
+   const winner = avgDolhins == avgKoalas ? `Tie` :(avgDolhins>=avgKoalas*2 ? `Dolhins win`:(avgKoalas>=avgDolhins*2 ? `Koalas win` :`No one win`));
+   return winner;
+   
+}
+
+const avgDolhins = calcAverage(8,23,71);
+console.log(avgDolhins);
+const avgKoalas = calcAverage(8,23,71);
+console.log(avgKoalas);
+console.log(checkWinner(avgDolhins,avgKoalas)); */
+
+//Lec 39 [Array]
+//Lec 41 [Coding Challange]
+
+/* const calcTip = bill =>{
+    const tip = bill>=50 && bill<=300 ? (bill*15)/100 : (bill*20)/100;
+    const totalBill = bill+tip;
+    return totalBill;
+}
+
+let billArray = new Array (125,555,44);
+
+let x;  let TotalBillArray = new Array();
+for(x in billArray){
+      console.log(calcTip(billArray[x]));
+      console.log(calcTip(billArray[x])+billArray[x]);
+      TotalBillArray.push((billArray[x])+billArray[x]);
+} */
+
+//Lec 42 [Introduction to Object]
+//Lec 43 [dot/bracker notation]
+/* const jonas={
+    firstName : 'Jonas',
+    lastName : 'Schamedman',
+    age : 2037-1991,
+    job: 'teacher',
+    friends : ['Rasel','Sam','Peter','Michel']
+}  */
+//console.log(jonas);
+/* console.log(jonas.lastName);//Dot 
+console.log(jonas['lastName']);//bracket notation
+let nameKey = 'Name';
+console.log(jonas['first'+nameKey]); */
+
+/* const interestedIn = prompt('What do you want to know about jona?choose firstName,lastName,job,age,friends?')
+if(jonas[interestedIn]){
+    console.log(jonas[interestedIn]);
+}
+else{
+    console.log(`wrong Request! choose right one`);
+} */
+/* 
+jonas.location = 'Bangladesh';
+jonas['twitter'] = '@jonsschmman';
+
+console.log(jonas.location); */
+
+//challange
+//Jonas has 3 friends and his best frind is called Rasel
+
+//console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
+
+//Lec 44 [Object Methods]
+//Lec 45 [Coding Challange #3]
+
+/* const MarkMillerObj = {
+    fullName : 'Mark Miller',
+    mass : 78,
+    height : 1.69,
+    calcBMI : function(){
+         const MarkBMI = this.mass /(this.height*this.height);
+       return MarkBMI;
+    }
+}
+
+const JohnSmithObj = {
+    fullName : 'John Smith',
+    mass : 92,
+    height : 1.95,
+    calcBMI : function(){
+        const JohnBMI = this.mass /(this.height*this.height);
+      return JohnBMI;
+   }
+}
+
+const compareBMI =(MarkMillerObj,JohnSmithObj)=>{
+   return MarkMillerObj.calcBMI()> JohnSmithObj.calcBMI() ?
+       `${MarkMillerObj.fullName}'s BMI(${MarkMillerObj.calcBMI()}) is higher than ${JohnSmithObj.fullName}'s (${JohnSmithObj.calcBMI()})`:
+       `${JohnSmithObj.fullName}'s BMI(${JohnSmithObj.calcBMI()}) is higher than ${MarkMillerObj.fullName}'s (${MarkMillerObj.calcBMI()})`;
+
+}
+
+console.log(compareBMI(MarkMillerObj,JohnSmithObj));
+ */
+
+//lec 46 [loop]
+//Lec 50 [Coding Challange #4]
+/* 
+const bills = [22,295,176,440,37,105,10,1100,86,52];
+
+const tips = new Array();
+const totals = new Array();
+
+const calcTip = bill =>{
+    return (bill>=50 && bill<=300) ? (bill*15)/100 : (bill*20)/100;
+}
+
+for(let x in bills){
+    tips.push(calcTip(bills[x]));
+    totals.push(bills[x]+calcTip(bills[x]));     
+}
+
+for(let i = 0;i<10;i++){
+    console.log(bills[i],tips[i] ,totals[i]);
+}
+ */
+'use strict';
+var x = 23;
+
+const calcAge = birthYear => 2037 - birthYear;
