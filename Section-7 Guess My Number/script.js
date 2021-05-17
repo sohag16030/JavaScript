@@ -28,10 +28,11 @@ document.querySelector('.check').addEventListener('click',function(){
     }
     else if(guess>secretNumber || guess<secretNumber){
         if(score>0){
-            if(guess>secretNumber)
-               document.querySelector('.message').textContent='🤢Number is Too high'
-            if(guess<secretNumber)
-               document.querySelector('.message').textContent='🤢Number is Too low'
+            document.querySelector('.message').textContent= guess>secretNumber? '🤢Number is Too high' : '🤢Number is Too low'
+            
+            /* if(guess>secretNumber) */
+         /*    if(guess<secretNumber)
+               document.querySelector('.message').textContent='🤢Number is Too low' */
         score--;
         document.querySelector('.score').textContent= score
         }
