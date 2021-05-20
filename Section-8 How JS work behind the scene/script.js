@@ -1,9 +1,11 @@
 'use strict';
+
+/* scope chain */
 //const and let are blocked scoped
 //function are also bloced scoped
 //var is function scoped
 
-function calcAge(birthYear){
+/* function calcAge(birthYear){
   const age =2037-birthYear;
   function printAge(){
     const output = `${firstName} You are ${age} years old, born in ${birthYear}`;
@@ -24,4 +26,31 @@ function calcAge(birthYear){
   return age;
 }
 const firstName = 'Jonas'
-console.log(calcAge(1992));
+console.log(calcAge(1992)); */
+
+//Hosting in JavaScript
+//Regular function vs Arrow Funciton
+
+var firstName = `Matella`
+const jonas = {
+  firstName : 'Jonas',
+  year :1991,
+  calcAge : function(){
+       console.log(this);
+       console.log(2037-this.year);
+       
+       const IsMillenial = function(){
+        console.log(this.year>=1981 && this.year<=1996)    
+    };
+    IsMillenial();
+  },
+   greet: ()=>console.log(`Hey ${this.firstName}`),
+   
+};
+
+jonas.greet();
+console.log(firstName);
+
+
+
+
