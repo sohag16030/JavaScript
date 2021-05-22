@@ -31,7 +31,7 @@ console.log(calcAge(1992)); */
 //Hosting in JavaScript
 //Regular function vs Arrow Funciton
 
-var firstName = `Matella`
+/* var firstName = `Matella`
 const jonas = {
   firstName : 'Jonas',
   year :1991,
@@ -49,7 +49,50 @@ const jonas = {
 };
 
 jonas.greet();
-console.log(firstName);
+console.log(firstName); */
+//Arrow keyword inherite <this> keyword from its parent scope but regular function can't
+
+
+//Premitive and Objective [Lec : 99]
+
+/* let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name :'Jonas',
+  age : 30
+}
+const friend = me;
+friend.age = 27;
+console.log('Friend:',friend);
+console.log('Jonas:',me); */
+
+//Primitive and Objective practice
+
+let lastName ='Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName,oldLastName);
+
+const jessica = {
+  firstName : 'Jessica',
+  lastName : 'williams',
+  age : 27,
+}   
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log(`Before marriage:`,jessica);
+console.log(`After marriage:`,marriedJessica);
+
+
+
+
+
+
+
 
 
 
