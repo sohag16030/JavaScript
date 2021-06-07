@@ -111,9 +111,60 @@ console.log(isFinite(10/1)); */
 console.log(x.toFixed(6)); */
 
 //NaN
-console.log(isNaN(`shohag`));
+/* console.log(isNaN(`shohag`)); */
 
+/* console.log("object")
+console.log("object") */
 
+//Asynchronous javascript //blocking behaviour, callbacks,promises,async-await
 
+/* const ProcessOrder = ()=>{
+   console.log(`processing order for customer 1`); */
+   //synchronus behaviour
+  /*  var currentTime = new Date().getTime();
+   while(currentTime + 3000>=new Date.getTime());
+
+     console.log(`Order processed for customer 1`) */
+ //Asynchronus behaviour [used WebApi/CallBackQueue]
+/*    setTimeout(() => {
+     console.log(`cooking completed`);
+   }, 3000);
+} */
+
+/* console.log(`take order for customer 1`);
+ProcessOrder();
+console.log(`completed order for customer 1`); */
+
+/* const takeOrder=(customer,callback)=>{
+  console.log(`Order taken for ${customer}`);
+  callback(customer);
+  
+}
+const processOrder=(customer,callback)=>{
+  console.log(`order Processing  for ${customer}`);
+  setTimeout(() => {  
+    console.log(`Cooking Completed`);
+    console.log(`order processed  for ${customer}`);
+    callback(customer);
+  }, 3000);
+ 
+}
+const completeOrder =(customer)=>{
+  console.log(`Order Completed for ${customer}`);
+}
+takeOrder("Shohag",(customer)=>{
+  processOrder(customer,(customer)=>{
+    completeOrder(customer);
+  })
+}); */
+
+/* const  myCalculator=(a,b,callBack)=>{
+  var sum = a+b;
+  callBack(sum,10,12);
+}
+const Display=(data,x,y)=>{
+  console.log(`${data} ${x} ${y}`);
+}
+myCalculator(5,5,Display) */
 
 
